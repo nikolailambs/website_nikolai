@@ -1,14 +1,13 @@
 .text-wrapper {
-  height: 90vh;
+  height: 60vh;
   position: relative;
 }
 
 #home-text-window {
   position: absolute;
-  overflow: auto;
   top: 30px;
   left: 40px;
-  bottom: 20px;
+  bottom: -10px;
   right: 40px;
   transition: left 500ms;
   background-color: #313744;
