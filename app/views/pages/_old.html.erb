@@ -7,7 +7,7 @@
         <div class="window-maximize"></div>
       </div>
     </div>
-    <div id="home-text-window"><br>/**<br>*<br>*<br>*  Hi, I'm <span style="color: #2AABE3">Nikolai Lambsdorff</span>.<br>*  I love creating <span style="color: #FEA73A">unique products</span> and <span style="color: #ED5863">innovative apps</span>.<br>*<br>*<br>**/</div>
+    <div id="home-text-window" style="font-family: monospace;"><br>/**<br>*<br>*  Hi, I'm <span style="color: #2AABE3">Nikolai Lambsdorff</span>.<br>*  I love creating <span style="color: #FEA73A">unique products</span> and <span style="color: #ED5863">innovative apps</span>.<br>*  Feel free to contact me under <a class="home-mail-link" href="mailto:nikolai.lambsdorff@gmx.de">nikolai.lambsdorff@gmx.de</a><br>*<br>**/</div>
   </div>
 
   <div class="content-container">
@@ -55,17 +55,30 @@
       </div>
     </div>
 
-    <div class="examples-wrapper">
-      <h2>Example pages</h2>
+    <div class="examples-wrapper" id="example-anchor">
+      <h2 style="display: flex; justify-content: center;">Example pages</h2>
       <div class="example-bar">
         <nav class="fill">
           <ul class="example-list list-inline">
+            <% i = 0 %>
             <% @examples.each do |example| %>
-            <li class="list-inline-item <%= example.name %>"><%= link_to example.name, example %></li>
+            <li class="list-inline-item <%= example.name %> example-list-hover" data-content="<%= @description[i] %>"><%= link_to example.name, example %></li>
+            <% i += 1 %>
             <% end %>
           </ul>
         </nav>
       </div>
+      <div class="examples-descriptions">
+        <p class="example-description"></p>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  $(".example-list-hover").hover(function() {
+    $('.example-description').html($(this).attr("data-content"));
+  }, function() {
+    $('.example-description').html("");
+  });
+</script>

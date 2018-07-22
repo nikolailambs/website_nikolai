@@ -15,6 +15,16 @@
   display: none;
 }
 
+.home-mail-link {
+  color: #FEA73A;
+  transition: all 0.5s ease;
+  &:hover {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    background-color: #2AABE3;
+  }
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -73,6 +83,10 @@
   &:hover {
     background-image: linear-gradient(-225deg, rgba(0,10,10,0.7) 80%, rgba(0,10,10,0.5) 90%), url(image_path("banner6.jpeg")) !important;
 }
+}
+
+.examples-wrapper {
+  height: 500px;
 }
 
 .example-list {
@@ -165,4 +179,13 @@ nav.fill ul li a:hover:after {
     height: 100%;
     background: #88CCF1;
   }
+}
+
+.example-description {
+  margin: 30px 80px;
+  padding: 20px 60px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  font-size: 19px;
+  line-height: 43px;
 }

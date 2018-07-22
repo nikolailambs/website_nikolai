@@ -1,6 +1,6 @@
   <div id="site-content" class="black-site-content">
     <div class="type-wrapper">
-      <span id="yourelement"></span>
+      <span id="yourelement" style="font-family: monospace;"></span>
     </div>
     <div id="hideAll" class="own-container hidden-home-page">
       <%= render 'old' %>
@@ -53,7 +53,7 @@
 
                function blackWhiteToggle(){
                 sr.reveal('.own-container', { duration: 1000 });
-                $('body').fadeTo('slow', 0.3, function() {
+                $('body').fadeTo('slow', 0, function() {
                   $(this).removeClass('black-body-background');
                 }).fadeTo('slow', 1);
                 $('.own-container').removeClass('hidden-home-page');
