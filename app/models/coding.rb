@@ -1,0 +1,2 @@
+class Coding < ApplicationRecord
+end

@@ -1,1 +1,170 @@
-// Specific CSS for your home-page
+.black-body-background {
+  background-color: #090001;
+  color: white;
+}
+
+.type-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 30px;
+}
+
+.hidden-home-page {
+  display: none;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 90vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: $light_blue;
+  font-family: 'Rubik', sans-serif;
+}
+.banner span {
+  font-size: 25px;
+  color: #333333;
+  opacity: 0.6;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.content-container {
+  z-index: 10;
+  position: relative;
+  border-top: 1px solid #d8d8d8;
+  background-color: #F4F4F4;
+  height: max-content;
+}
+
+.banner-container {
+  height: 80vh;
+  /*background-image: url(image_path("art1.jpg"));*/
+}
+
+.code-hover {
+  position: relative;
+  transition: all 1s ease;
+  h4 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 1s ease;
+    color: $red;
+    position: absolute;
+  }
+  &:hover h4 {
+    opacity: 1;
+  }
+  &:hover {
+    background-image: linear-gradient(-225deg, rgba(0,10,10,0.7) 80%, rgba(0,10,10,0.5) 90%), url(image_path("banner6.jpeg")) !important;
+}
+}
+
+.example-list {
+  margin: 50px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* NAVIGATION */
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: $light_blue;
+}
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #88CCF1;
+  }
+}

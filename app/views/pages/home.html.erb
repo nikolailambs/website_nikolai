@@ -1,2 +1,69 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <div id="site-content" class="black-site-content">
+    <div class="type-wrapper">
+      <span id="yourelement"></span>
+    </div>
+    <div id="hideAll" class="own-container hidden-home-page">
+      <%= render 'old' %>
+    </div>
+
+
+
+    <script>
+      window.sr = ScrollReveal();
+    // elements reveal
+    sr.reveal('.scroll-box', { duration: 1000,reset: true });
+    sr.reveal('.scroll-box-delayed', { duration: 2000, reset: true });
+    sr.reveal('.cv-row', { duration: 2000, reset: true });
+    sr.reveal('.cd-timeline-img', { duration: 1000, reset: true})
+    sr.reveal('.cd-timeline-content', { duration: 2000, reset: true })
+    sr.reveal('.examples-wrapper', {duration: 1000, reset: true})
+
+    // example reveal
+    <% i = 500 %>
+    <% @examples.each do |example| %>
+    sr.reveal('.<%= example.name %>', {duration: <%= i %>, reset: true})
+    <% i += 500 %>
+    <% end %>
+
+
+
+    var cookieName = 'yourcookiename';
+    $(function() {
+      checkCookie();
+    });
+
+    function checkCookie() {
+      if (document.cookie.length > 0 && document.cookie.indexOf(cookieName + '=') != -1) {
+            // do nothing, cookie already sent
+            $('.type-wrapper').addClass('hidden-home-page');
+            $('.own-container').removeClass('hidden-home-page');
+
+          } else {
+               // typing element
+               $('body').addClass('black-body-background');
+               $("#yourelement").typed({
+                strings: ["Do you need a <strong>new website</strong>?", "But you don't have a <strong>good developer</strong>?", "If so, <strong>start scrolling</strong>."],
+                typeSpeed: 20,
+                startDelay: 500,
+                backDelay: 800,
+                callback: function() {
+                  blackWhiteToggle()
+                }
+              });
+
+               function blackWhiteToggle(){
+                sr.reveal('.own-container', { duration: 1000 });
+                $('body').fadeTo('slow', 0.3, function() {
+                  $(this).removeClass('black-body-background');
+                }).fadeTo('slow', 1);
+                $('.own-container').removeClass('hidden-home-page');
+                $('.type-wrapper').addClass('hidden-home-page');
+              }
+
+            // set the cookie to show user has already visited
+            document.cookie = cookieName + "=1";
+          }
+        }
+      </script>
+
+

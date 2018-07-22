@@ -1,0 +1,71 @@
+<div class="home-page-wrapper">
+  <div class="text-wrapper">
+    <div class="top-bar">
+      <div class="window-dots">
+        <div class="window-close"></div>
+        <div class="window-minimize"></div>
+        <div class="window-maximize"></div>
+      </div>
+    </div>
+    <div id="home-text-window"><br><br>/**<br>*<br>*<br>*  Hi, I'm <span style="color: #2AABE3">Nikolai Lambsdorff</span>.<br>*  I love creating <span style="color: #FEA73A">unique products</span> and <span style="color: #ED5863">innovative apps</span>.<br>*<br>*<br>**/</div>
+  </div>
+
+  <div class="content-container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="scroll-box">
+          <div class="page-box big-box">
+            I am a developer, that combines high level <span style="color: #3C91E6;">programming skills</span> with deep knowledge in <span style="color: #3C91E6;">business and mechanical engineering</span>. This makes me able to not only create a beautiful and responsive website, but also to connect it meaningful to your business model and technology.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-box">
+      <div class="banner code-hover" style='background-image: linear-gradient(-225deg, rgba(0,10,10,0.4) 40%, rgba(0,10,10,0.2) 80%), url(<%= image_path("banner6.jpeg") %>); height: 50vh !important;'>
+        <h4 style="top: <%= @rand_top[0] %>%;left: <%= @rand_left[0] %>%;">HTML</h4>
+        <h4 style="top: <%= @rand_top[1] %>%;left: <%= @rand_left[1] %>%;">CSS</h4>
+        <h4 style="top: <%= @rand_top[2] %>%;left: <%= @rand_left[2] %>%;">JavaScript</h4>
+        <h4 style="top: <%= @rand_top[3] %>%;left: <%= @rand_left[3] %>%;">Ruby</h4>
+        <h4 style="top: <%= @rand_top[4] %>%;left: <%= @rand_left[4] %>%;">SQL</h4>
+        <h4 style="top: <%= @rand_top[5] %>%;left: <%= @rand_left[5] %>%;">Rails</h4>
+        <h4 style="top: <%= @rand_top[6] %>%;left: <%= @rand_left[6] %>%;">SCSS</h4>
+        <h4 style="top: <%= @rand_top[7] %>%;left: <%= @rand_left[7] %>%;">jQuery</h4>
+        <h4 style="top: <%= @rand_top[8] %>%;left: <%= @rand_left[8] %>%;">Bootstrap</h4>
+        <h4 style="top: <%= @rand_top[9] %>%;left: <%= @rand_left[9] %>%;">Regex</h4>
+      </div>
+    </div>
+
+    <%= render 'timeline' %>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="scroll-box">
+          <div class="page-box half-box">
+            *I am able to build complex websites and webapps. I have learnd and impoved software development through several programming courses and projects.*
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="scroll-box-delayed">
+          <div class="page-box half-box">
+            *On the other side, I have a lot of knowledge in business through studies and work experience on the one side. I am able to connect important points like marketing and strategy with website development.*
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="examples-wrapper">
+      <h2>Example pages</h2>
+      <div class="example-bar">
+        <nav class="fill">
+          <ul class="example-list list-inline">
+            <% @examples.each do |example| %>
+            <li class="list-inline-item <%= example.name %>"><%= link_to example.name, example %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,129 @@
+<div class="modern-container">
+  <div class="back-arrow-wrapper">
+    <div class="back-arrow-block">
+      <div class="back-arrow"></div>
+      <div class="back-block">
+        <%= link_to "Back", root_path %>
+      </div>
+    </div>
+  </div>
+
+  <section class="et-hero-tabs">
+    <div class="modern-banner banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path("modern3.jpg") %>);">
+      <div class="banner-content">
+        <h1>Modern Company</h1>
+        <h3>This is an example for a simple modern website</h3>
+      </div>
+    </div>
+
+    <div class="et-hero-tabs-container">
+      <a class="et-hero-tab" href="#tab-es6">Vision</a>
+      <a class="et-hero-tab" href="#tab-flexbox">Product</a>
+      <a class="et-hero-tab" href="#tab-react">Company</a>
+      <a class="et-hero-tab" href="#tab-angular">About</a>
+      <a class="et-hero-tab" href="#tab-other">Contact</a>
+      <span class="et-hero-tab-slider"></span>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="et-main">
+    <section class="et-slide" id="tab-es6">
+      <h1>Vision</h1>
+      <h3>something about the vision of the founder</h3>
+    </section>
+    <section class="et-slide" id="tab-flexbox">
+      <h1>Product</h1>
+      <h3>something about the innovative product</h3>
+    </section>
+    <section class="et-slide" id="tab-react">
+      <h1>Company</h1>
+      <h3>something about the history of company</h3>
+    </section>
+    <section class="et-slide" id="tab-angular">
+      <h1>About</h1>
+      <h3>something about the employees of the company</h3>
+    </section>
+    <section class="et-slide" id="tab-other">
+      <h1>Contact</h1>
+      <h3>contact details</h3>
+    </section>
+  </div>
+
+  <script>
+    class StickyNavigation {
+
+      constructor() {
+        this.currentId = null;
+        this.currentTab = null;
+        this.tabContainerHeight = 70;
+        let self = this;
+        $('.et-hero-tab').click(function() {
+          self.onTabClick(event, $(this));
+        });
+        $(window).scroll(() => { this.onScroll(); });
+        $(window).resize(() => { this.onResize(); });
+      }
+
+      onTabClick(event, element) {
+        event.preventDefault();
+        let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+        $('html, body').animate({ scrollTop: scrollTop }, 600);
+      }
+
+      onScroll() {
+        this.checkTabContainerPosition();
+        this.findCurrentTabSelector();
+      }
+
+      onResize() {
+        if(this.currentId) {
+          this.setSliderCss();
+        }
+      }
+
+      checkTabContainerPosition() {
+        let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+        if($(window).scrollTop() > offset) {
+          $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+        }
+        else {
+          $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+        }
+      }
+
+      findCurrentTabSelector(element) {
+        let newCurrentId;
+        let newCurrentTab;
+        let self = this;
+        $('.et-hero-tab').each(function() {
+          let id = $(this).attr('href');
+          let offsetTop = $(id).offset().top - self.tabContainerHeight;
+          let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+          if($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+            newCurrentId = id;
+            newCurrentTab = $(this);
+          }
+        });
+        if(this.currentId != newCurrentId || this.currentId === null) {
+          this.currentId = newCurrentId;
+          this.currentTab = newCurrentTab;
+          this.setSliderCss();
+        }
+      }
+
+      setSliderCss() {
+        let width = 0;
+        let left = 0;
+        if(this.currentTab) {
+          width = this.currentTab.css('width');
+          left = this.currentTab.offset().left;
+        }
+        $('.et-hero-tab-slider').css('width', width);
+        $('.et-hero-tab-slider').css('left', left);
+      }
+
+    }
+
+    new StickyNavigation();
+  </script>

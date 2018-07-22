@@ -1,0 +1,141 @@
+<div class="overlay-navigation">
+  <nav class="art-nav" role="navigation">
+    <ul class="art-ul">
+      <li class="art-list"><a class="art-link" data-pagelink-title="" data-content="The beginning" data-pagelink-content="">Home</a></li>
+      <li class="art-list"><a class="art-link" data-pagelink-title="about" data-content="Curious?" data-pagelink-content="I am a passionated photographer, born in Berlin in 1995. I'm traveling around the world, trying to catch unique nature experinces. I have a small studio in the heart of London.">About</a></li>
+      <li class="art-list"><a class="art-link" data-pagelink-title="vision" data-content="Why do we do that?" data-pagelink-content="Most of the people don't value our planet and it's impressive biodiversity enough. My vision is to bring the incredible art of our nature to everyones home.">Vision</a></li>
+      <li class="art-list"><a class="art-link" data-pagelink-title="team" data-content="Only the finest" data-pagelink-content="My team consists of two other photographers, from Belgium, and me.">Team</a></li>
+      <li class="art-list"><a class="art-link" data-pagelink-title="contact" data-content="Don't hesitate" data-pagelink-content="We are lokated in London on Kingsroad. You can meet us also a lot on events and auctions. Also feel free to contact us under: <a href='mailto:nikolai.lambsdorff@gmx.de'>nikolai.lambsdorff@gmx.de</a>">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<section class="home">
+  <%= link_to "Back", root_path, class: "art-back-link" %>
+  <div class="open-overlay">
+    <span class="bar-top"></span>
+    <span class="bar-middle"></span>
+    <span class="bar-bottom"></span>
+  </div>
+  <div class="art-content">
+    <h1 class="art-content-title"></h1>
+    <p class="art-content-content"></p>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+
+<!-- Navigation menu animation -->
+<script>
+ $('.open-overlay').click(function() {
+   $('.open-overlay').css('pointer-events', 'none');
+   var overlay_navigation = $('.overlay-navigation'),
+   top_bar = $('.bar-top'),
+   middle_bar = $('.bar-middle'),
+   bottom_bar = $('.bar-bottom');
+
+   overlay_navigation.toggleClass('overlay-active');
+   if (overlay_navigation.hasClass('overlay-active')) {
+
+     top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+     middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+     bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+     overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+
+     $('.overlay-navigation').velocity('transition.slideLeftIn', {
+       duration: 300,
+       delay: 0,
+       begin: function() {
+         $('nav ul li').velocity('transition.perspectiveLeftIn', {
+           stagger: 150,
+           delay: 0,
+           complete: function() {
+             $('nav ul li a').velocity({
+               opacity: [1, 0],
+             }, {
+               delay: 10,
+               duration: 140
+             });
+             $('.open-overlay').css('pointer-events', 'auto');
+           }
+         })
+       }
+     })
+
+   } else {
+     $('.open-overlay').css('pointer-events', 'none');
+     top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+     middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+     bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+     overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+     $('nav ul li').velocity('transition.perspectiveRightOut', {
+       stagger: 150,
+       delay: 0,
+       complete: function() {
+         overlay_navigation.velocity('transition.fadeOut', {
+           delay: 0,
+           duration: 300,
+           complete: function() {
+             $('nav ul li a').velocity({
+               opacity: [0, 1],
+             }, {
+               delay: 0,
+               duration: 50
+             });
+             $('.open-overlay').css('pointer-events', 'auto');
+           }
+         });
+       }
+     })
+   }
+ })
+</script>
+
+
+<script>
+//  Content filling page --> -->
+$('.art-link').click(function() {
+  var title = this.getAttribute("data-pagelink-title");
+  var content = this.getAttribute("data-pagelink-content");
+  $(".art-content-title").html(title);
+  $(".art-content-content").html(content);
+});
+
+
+//  Close animation on clicking on link --> -->
+$('.art-link').click(function() {
+
+ var overlay_navigation = $('.overlay-navigation'),
+ top_bar = $('.bar-top'),
+ middle_bar = $('.bar-middle'),
+ bottom_bar = $('.bar-bottom');
+
+ overlay_navigation.toggleClass('overlay-active');
+
+ $('.open-overlay').css('pointer-events', 'none');
+ top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+ middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+ bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+ overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+ $('nav ul li').velocity('transition.perspectiveRightOut', {
+   stagger: 150,
+   delay: 0,
+   complete: function() {
+     overlay_navigation.velocity('transition.fadeOut', {
+       delay: 0,
+       duration: 300,
+       complete: function() {
+         $('nav ul li a').velocity({
+           opacity: [0, 1],
+         }, {
+           delay: 0,
+           duration: 50
+         });
+         $('.open-overlay').css('pointer-events', 'auto');
+       }
+     });
+   }
+ })
+});
+</script>
