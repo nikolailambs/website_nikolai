@@ -1,0 +1,14 @@
+.hidden-video {
+  video {
+    display: none;
+  }
+}
+
+.video {
+  video {
+    border: 3px solid #464646;
+    border-radius: 14px;
+    box-shadow: -6px -6px #d4d4d4;
+    margin-left: 70px;
+  }
+}
