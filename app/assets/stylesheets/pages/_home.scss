@@ -87,9 +87,6 @@
 
 .example-list {
   margin: 50px 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
   a {
     &:hover {
@@ -196,6 +193,11 @@ nav.fill ul li a:hover:after {
   line-height: 43px;
 }
 
+.example-list-item-position {
+  display: flex;
+  justify-content: center;
+}
+
 .contact-info {
   display: flex;
   justify-content: space-around;
@@ -203,3 +205,24 @@ nav.fill ul li a:hover:after {
   height: 200px;
   font-size: 30px;
 }
+.contact-list-item {
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+  justify-content: center;
+}
+
+
+@media screen and (min-width: 601px) {
+  .contact-mail-link {
+    font-size: 30px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .contact-mail-link {
+    font-size: 17px;
+  }
+}
+

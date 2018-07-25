@@ -17,7 +17,19 @@
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: -9px -6px 0px 0px rgba(0, 0, 0, 0.1);
-  font-size: 28px;
+}
+
+@media screen and (min-width: 601px) {
+  #home-text-window {
+    font-size: 28px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  #home-text-window {
+    font-size: 17px;
+  }
 }
 
 .top-bar {
