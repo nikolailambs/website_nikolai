@@ -174,9 +174,14 @@ nav.fill ul li a:hover:after {
   }
 }
 
+.examples-wrapper {
+  height: 100vh;
+}
+
 .examples-descriptions {
-  margin: 150px 25px 50px 25px;
-  height: 0px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 400px;
   display: flex;
   align-items: center;
   border-bottom: 0.5px solid #969696;
@@ -185,8 +190,8 @@ nav.fill ul li a:hover:after {
 }
 
 .example-description {
-  margin: 30px 80px;
-  padding: 20px 60px;
+  margin: 30px 0px;
+  padding: 20px 20px;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 1px;
   font-size: 19px;
@@ -199,11 +204,12 @@ nav.fill ul li a:hover:after {
 }
 
 .contact-info {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
+  height: 100vh;
   font-size: 30px;
+}
+.contact-info-wrapper {
+  position: absolute;
+  top: 45%;
 }
 .contact-list-item {
   display: flex;
