@@ -40,6 +40,7 @@
             // do nothing, cookie already sent
             $('.type-wrapper').addClass('hidden-home-page');
             $('.own-container').removeClass('hidden-home-page');
+            $('h2').removeClass('hidden-home-page');
 
           } else {
                // typing element
@@ -61,6 +62,7 @@
                 }).fadeTo('slow', 1);
                 $('.own-container').removeClass('hidden-home-page');
                 $('.type-wrapper').addClass('hidden-home-page');
+                $('h2').removeClass('hidden-home-page');
               }
 
             // set the cookie to show user has already visited
