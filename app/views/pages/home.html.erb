@@ -11,7 +11,7 @@
   <script>
     window.sr = ScrollReveal();
     // elements reveal
-    sr.reveal('.scroll-box', { duration: 1000,reset: true });
+    sr.reveal('.scroll-box', { duration: 2000,reset: true });
     sr.reveal('.scroll-box-delayed', { duration: 2000, reset: true });
     sr.reveal('.home-page-header', { duration: 1000, reset: true });
     sr.reveal('.cv-row', { duration: 2000, reset: true });
@@ -21,6 +21,9 @@
     sr.reveal('.examples-wrapper', {duration: 1000, reset: true})
     sr.reveal('.examples-descriptions', {duration: 2000, reset: true})
     sr.reveal('.contact-info', {duration: 2000, reset: true})
+    sr.reveal('.knowldge-container', {duration: 2000, reset: true})
+
+
 
     // example reveal
     <% i = 500 %>
@@ -28,6 +31,15 @@
     sr.reveal('.<%= example.name %>', {duration: <%= i %>, reset: true})
     <% i += 500 %>
     <% end %>
+
+
+
+    // knowledge-reveal
+    var i = 1500;
+    $('.knowledge-reveal').each(function(){
+      sr.reveal(`#${this.id}`, {duration: i, reset: true})
+      i += 500;
+    });
 
 
 

@@ -1,0 +1,83 @@
+.knowledge-container {
+  text-align: center;
+}
+
+.knowledge-icon {
+  margin-top: 80px;
+}
+
+.knowledge-text {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.knowledge-content span {
+  transition: all 1s ease;
+}
+
+@media screen and (min-width: 701px) {
+  .knowledge-text {
+    margin: 30px 80px;
+  }
+  .knowledge-icon {
+    img {
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      transition: all 1s ease;
+    }
+  }
+  .knowledge-content:hover img {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+  }
+  .knowledge-content:hover #uni {
+    color: #f4f4f4;
+    background-color: #88CCF1;
+  }
+  .knowledge-content:hover #coding {
+    color: #f4f4f4;
+    background-color: #ED5863;
+  }
+  .knowledge-content:hover #intern {
+    color: #f4f4f4;
+    background-color: #FEA73A;
+  }
+}
+
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 700px) {
+  .knowledge-text {
+    margin: 30px 20px;
+  }
+  .knowledge-content #uni {
+    color: #f4f4f4;
+    background-color: #88CCF1;
+  }
+  .knowledge-content #coding {
+    color: #f4f4f4;
+    background-color: #ED5863;
+  }
+  .knowledge-content #intern {
+    color: #f4f4f4;
+    background-color: #FEA73A;
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width: 1001px) {
+  .knowledge-container {
+   margin: 0px 100px;
+ }
+}
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 1000px) {
+  .knowledge-container {
+   margin: 0px 0px;
+ }
+}
