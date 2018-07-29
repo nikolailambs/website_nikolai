@@ -1,7 +1,7 @@
 <div class="text-wrapper">
   <div id="home-page-header" class="">
-    <h2 class="particle-header hidden-home-page" style="top: 30%;">Hi, I'm <span style="color: #f4f4f4;background-color: #88CCF1;">Nikolai Lambsdorff</span>.</h2>
-    <h2 class="particle-header hidden-home-page" style="top: 40%;">I love creating <span style="color: #f4f4f4; background-color: #FEA73A;">unique products</span> and <span style="color: #f4f4f4;background-color: #ED5863;">innovative apps</span>.</h2>
+    <h2 class="particle-header" style="top: 30%;">Hi, I'm <span style="color: #f4f4f4;background-color: #88CCF1;">Nikolai Lambsdorff</span>.</h2>
+    <h2 class="particle-header particle-header-two">I love creating <span style="color: #f4f4f4; background-color: #FEA73A;">unique products</span> and <span style="color: #f4f4f4;background-color: #ED5863;">innovative apps</span>.</h2>
   </div>
   <button type="button" class="scroll_down" id="scroll_down"></button>
 </div>
@@ -118,24 +118,6 @@
     },
     retina_detect: true
   });
-  // var count_particles, stats, update;
-  // stats = new Stats();
-  // stats.setMode(0);
-  // stats.domElement.style.position = "absolute";
-  // stats.domElement.style.left = "0px";
-  // stats.domElement.style.top = "0px";
-  // document.body.appendChild(stats.domElement);
-  // count_particles = document.querySelector(".js-count-particles");
-  // update = function() {
-  //   stats.begin();
-  //   stats.end();
-  //   if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-  //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  //   }
-  //   requestAnimationFrame(update);
-  // };
-  // requestAnimationFrame(update);
-
 
 
   // scroll icon hide on scroll
@@ -144,9 +126,9 @@
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll > position) {
-    $('#scroll_down').fadeOut('slow')
+    $('#scroll_down').fadeOut(1500)
   } else {
-    $('#scroll_down').fadeIn('slow')
+    $('#scroll_down').fadeIn(1500)
   }
   position = scroll;
 });

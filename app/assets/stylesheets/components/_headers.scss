@@ -17,8 +17,7 @@ h2 {
 }
 
 .contact-page-header {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   width: 100%;
   position: absolute;
   top: 27%;
@@ -40,4 +39,20 @@ h2 {
  width: 100%;
  color: #404040;
  font-weight: bold;
+}
+
+@media screen and (min-width: 701px) {
+  .particle-header-two {
+    top: 40%;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 700px) {
+  .particle-header {
+    line-height: 50px;
+  }
+  .particle-header-two {
+    top: 45%;
+  }
 }
