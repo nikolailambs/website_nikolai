@@ -217,6 +217,15 @@ nav.fill ul li a:hover:after {
   .contact-mail-link {
     font-size: 30px;
   }
+  .big-box:hover {
+    .my-img {
+      filter: grayscale(30%);
+    }
+    .about-span {
+      color: #f7f7f7;
+      background-color: #88CCF1;
+    }
+  }
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
@@ -234,9 +243,21 @@ nav.fill ul li a:hover:after {
   .examples-wrapper {
     height: 70vh;
   }
+  .my-img {
+    filter: grayscale(30%);
+  }
+  .about-span {
+    color: #f7f7f7;
+    background-color: #88CCF1;
+  }
 }
 
 .my-img {
-  border-radius: 50%;
-  max-width: 400px;
+  /*border-radius: 50%;*/
+  height: 338px;
+  filter: grayscale(100%);
+  transition: all 1s ease;
+}
+.about-span {
+  transition: all 1s ease;
 }
