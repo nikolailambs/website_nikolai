@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-9 col-cs-12">
           <p class="about-text">I am a developer, who combines high level <span class="about-span">programming skills</span> with deep knowledge in <span class="about-span">business and mechanical engineering</span>. This makes me able to not only create a beautiful and responsive website, but also to connect it meaningful to your business model and technology.</p>
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -22,29 +22,26 @@
     <div class="example-bar">
       <nav class="fill">
         <ul class="example-list list-inline">
-          <% i = 0 %>
           <div class="row" style="width: 100%;">
             <% @examples.each do |example| %>
-            <div class="col-lg-3 col-sm-6 col-xs-12 example-list-item-position">
-              <li class="list-inline-item <%= example.name %> example-list-hover" data-content="<%= @description[i] %>"><%= link_to example.name, example %></li>
+            <%= link_to example do %>
+            <div class="col-md-6 col-sm-12 example-list-item-position video">
+              <li class="list-inline-item <%= example.name %> example-list-hover">
+                <% url = "https://res.cloudinary.com/dcmqib0ib/video/upload/v1532352822/#{example.name.downcase}.mov" %>
+                <video src="<%= url %>"></video>
+                <div class="example-description"><p class="example-description-text"><%= example.name %></p></div>
+              </li>
             </div>
-            <% i += 1 %>
+            <% end %>
             <% end %>
           </div>
         </ul>
       </nav>
     </div>
 
-
-    <div class="examples-descriptions">
-      <div class="video">
-        <%= video_tag("art.mov", :autoplay => true, :loop => true, :size => "433x240") %>
-      </div>
-      <p class="example-description"></p>
-    </div>
-
   </div>
-  <%#= render 'timeline' %>
+
+
   <%= render 'knowledge' %>
 
 
@@ -62,28 +59,15 @@
 </div>
 
 
-
-
 <script>
-  $(".example-list-hover").hover(function() {
+  $(".video").hover( hoverVideo, hideVideo );
 
-    $('.example-description').html($(this).attr("data-content"));
-    changeSource($(this).find("a").text().toLowerCase());
-      // $('.video').removeClass("hidden-video");
-      // $('.examples-descriptions').stop().animate({ height: 400 }, "slow" );
+  function hoverVideo() {
+    $('video', this).get(0).play();
+  }
 
-    }, function() {
-
-      // $('.example-description').html("");
-      // $('.video').addClass("hidden-video")
-      // $('.examples-descriptions').stop().animate({ height: 0 }, "slow" );
-
-    });
-
-  function changeSource(url) {
-   source = "https://res.cloudinary.com/dcmqib0ib/video/upload/v1532352822/"+url+".mov";
-   $('video').attr('src', source);
-   $('video').load();
- };
+  function hideVideo() {
+    $('video', this).get(0).pause();
+  }
 
 </script>
