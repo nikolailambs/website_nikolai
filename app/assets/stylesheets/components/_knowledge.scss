@@ -69,16 +69,14 @@
 
 
 
-
-
 @media screen and (min-width: 1001px) {
   .knowledge-container {
-   margin: 0px 100px;
+   margin: 90px 100px;
  }
 }
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 1000px) {
   .knowledge-container {
-   margin: 0px 0px;
+       margin: 90px 0px;
  }
 }

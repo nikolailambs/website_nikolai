@@ -1,85 +1,25 @@
-<!--   <div id="site-content" class="black-site-content">
-    <div class="type-wrapper">
-      <span id="yourelement" style="font-family: monospace;"></span>
-    </div> -->
-    <div class="own-container">
-      <%= render 'content' %>
-    </div>
+
+<div class="own-container">
+  <%= render 'content' %>
+</div>
 
 
 
-  <script>
-    window.sr = ScrollReveal();
+<script>
+  window.sr = ScrollReveal();
     // elements reveal
-    sr.reveal('.scroll-box', { duration: 2000,reset: true });
-    sr.reveal('.scroll-box-delayed', { duration: 2000, reset: true });
-    sr.reveal('.home-page-header', { duration: 1000, reset: true });
-    sr.reveal('.cv-row', { duration: 2000, reset: true });
-    sr.reveal('.cd-timeline-img', { duration: 1000, reset: true})
-    sr.reveal('.cd-timeline-content', { duration: 2000, reset: true })
-    sr.reveal('.timeline-page-header', { duration: 2000, reset: true })
-    sr.reveal('.examples-wrapper', {duration: 1000, reset: true})
-    sr.reveal('.examples-descriptions', {duration: 2000, reset: true})
-    sr.reveal('.contact-info', {duration: 2000, reset: true})
-    sr.reveal('.knowldge-container', {duration: 2000, reset: true})
-
-
-
-    // example reveal
-    <% i = 500 %>
-    <% @examples.each do |example| %>
-    sr.reveal('.<%= example.name %>', {duration: <%= i %>, reset: true})
-    <% i += 500 %>
-    <% end %>
-
+    sr.reveal('.scroll-reveal-box', { duration: 3000 ,reset: true });
 
 
     // knowledge-reveal
-    var i = 1500;
-    $('.knowledge-reveal').each(function(){
-      sr.reveal(`#${this.id}`, {duration: i, reset: true})
-      i += 500;
+    var i = 500;
+    $('.element-reveal-box').each(function(){
+      sr.reveal($(this), {duration: i, reset: true});
+      if (i = 2000) {
+        i = 500;
+      }else{
+        i += 500;
+      };
     });
 
-
-
-    // var cookieName = 'yourcookiename';
-    // $(function() {
-    //   checkCookie();
-    // });
-
-    // function checkCookie() {
-    //   if (document.cookie.length > 0 && document.cookie.indexOf(cookieName + '=') != -1) {
-    //         // do nothing, cookie already sent
-    //         $('.type-wrapper').addClass('hidden-home-page');
-    //         $('.own-container').removeClass('hidden-home-page');
-    //         $('h2').removeClass('hidden-home-page');
-
-    //       } else {
-    //            // typing element
-    //            $('body').addClass('black-body-background');
-    //            $("#yourelement").typed({
-    //             strings: ["Do you need a <strong>new website</strong>?", "But you don't have a <strong>good developer</strong>?", "If so, <strong>start scrolling</strong>."],
-    //             typeSpeed: 20,
-    //             startDelay: 500,
-    //             backDelay: 800,
-    //             callback: function() {
-    //               blackWhiteToggle()
-    //             }
-    //           });
-
-    //            function blackWhiteToggle(){
-    //             sr.reveal('.own-container', { duration: 1000 });
-    //             $('body').fadeTo('slow', 0, function() {
-    //               $(this).removeClass('black-body-background');
-    //             }).fadeTo('slow', 1);
-    //             $('.own-container').removeClass('hidden-home-page');
-    //             $('.type-wrapper').addClass('hidden-home-page');
-    //             $('h2').removeClass('hidden-home-page');
-    //           }
-
-    //         // set the cookie to show user has already visited
-    //         document.cookie = cookieName + "=1";
-    //       }
-    //     }
-      </script>
+  </script>

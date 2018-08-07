@@ -205,11 +205,13 @@ nav.fill ul li a:hover:after {
 .contact-info {
   height: 100vh;
   font-size: 30px;
+  border: 30px solid white;
 }
-.contact-info-wrapper {
-  position: absolute;
-  top: 45%;
+
+.contact-text-wrapper {
+  padding-top: 130px;
 }
+
 .contact-list-item {
   display: flex;
   padding-left: 5px;

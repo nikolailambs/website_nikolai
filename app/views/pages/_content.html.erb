@@ -1,8 +1,11 @@
 
 <%= render 'particle' %>
 
+<!-- content -->
 <div class="content-container">
-  <div class="scroll-box">
+
+  <!-- about box -->
+  <div class="scroll-box scroll-reveal-box">
     <h2 class="about-page-header">About</h2>
     <div class="page-box big-box">
       <div class="row">
@@ -16,8 +19,8 @@
     </div>
   </div>
 
-
-  <div class="examples-wrapper" id="example-anchor">
+  <!-- example section -->
+  <div class="examples-wrapper scroll-reveal-box" id="example-anchor">
     <h2 class="example-page-header">Example pages</h2>
     <div class="example-bar">
       <nav class="fill">
@@ -25,7 +28,7 @@
           <div class="row" style="width: 100%;">
             <% @examples.each do |example| %>
             <%= link_to example do %>
-            <div class="col-md-6 col-sm-12 example-list-item-position video">
+            <div class="col-md-6 col-sm-12 example-list-item-position video element-reveal-box">
               <li class="list-inline-item <%= example.name %> example-list-hover">
                 <% url = "https://res.cloudinary.com/dcmqib0ib/video/upload/v1532352822/#{example.name.downcase}.mov" %>
                 <video src="<%= url %>"></video>
@@ -38,24 +41,25 @@
         </ul>
       </nav>
     </div>
-
   </div>
 
-
+  <!-- knowledge icon grid -->
   <%= render 'knowledge' %>
 
-
-
-  <div class="contact-info">
-    <h2 class="contact-page-header">Feel free to contact me</h2>
-    <nav class="fill contact-info-wrapper" style="width: 100%;">
-      <ul class="example-list row">
-        <li class="contact-list-item col-md-4 col-xs-12"><a class="" href="https://www.linkedin.com/in/nikolai-lambsdorff-1b2241b6/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-        <li class="contact-list-item col-md-4 col-xs-12"><a class="contact-mail-link" href="mailto:nikolai.lambsdorff@gmx.de">nikolai.lambsdorff@gmx.de</a></li>
-        <li class="contact-list-item col-md-4 col-xs-12"><a class="" href="https://github.com/nikolailambs" target="_blank"><i class="fab fa-github"></i></a></li>
-      </ul>
-    </nav>
+  <!-- contact info -->
+  <div class="contact-info scroll-reveal-box">
+    <div class="contact-text-wrapper">
+      <h2 class="contact-page-header">Feel free to contact me</h2>
+      <nav class="fill contact-info-wrapper">
+        <ul class="example-list row">
+          <li class="contact-list-item col-md-4 col-xs-12"><a class="" href="https://www.linkedin.com/in/nikolai-lambsdorff-1b2241b6/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li class="contact-list-item col-md-4 col-xs-12"><a class="contact-mail-link" href="mailto:nikolai.lambsdorff@gmx.de">nikolai.lambsdorff@gmx.de</a></li>
+          <li class="contact-list-item col-md-4 col-xs-12"><a class="" href="https://github.com/nikolailambs" target="_blank"><i class="fab fa-github"></i></a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
+
 </div>
 
 

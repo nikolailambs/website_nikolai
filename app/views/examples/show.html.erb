@@ -11,15 +11,15 @@
   <section class="et-hero-tabs">
     <div class="modern-banner banner" style='background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("https://res.cloudinary.com/dcmqib0ib/image/upload/modern3.jpg");'>
       <div class="banner-content">
-        <h1>Modern Company</h1>
-        <h3>This is an example for a simple modern website</h3>
+        <h1>Modern App Company</h1>
+        <h3>This is an example for a simple modern website of an example company that created a stock app.</h3>
       </div>
     </div>
 
     <div class="et-hero-tabs-container">
       <a class="et-hero-tab" href="#tab-es6">Vision</a>
       <a class="et-hero-tab" href="#tab-flexbox">Product</a>
-      <a class="et-hero-tab" href="#tab-react">Company</a>
+      <a class="et-hero-tab" href="#tab-react">Pricing</a>
       <a class="et-hero-tab" href="#tab-angular">About</a>
       <a class="et-hero-tab" href="#tab-other">Contact</a>
       <span class="et-hero-tab-slider"></span>
@@ -28,28 +28,155 @@
 
   <!-- Main -->
   <main class="et-main">
+
+    <!-- section vision -->
     <section class="et-slide" id="tab-es6">
       <h1>Vision</h1>
-      <h3>something about the vision of the founder</h3>
+      <h3>To create the perfect stock app.</h3>
     </section>
-    <section class="et-slide" id="tab-flexbox">
-      <h1>Product</h1>
-      <h3>something about the innovative product</h3>
+
+    <!-- section product -->
+    <section class="et-slide" id="tab-flexbox" style="background: #e8e8e8;">
+      <div id="modern-product-tabs">
+        <ul id="accordion" class="modern-product-list">
+          <li>
+            <a class="modern-product-active" href="#modern-product-tabs-1">
+              <div class="modern-product-tag">
+                <div class="modern-product-icon">
+                  <div class="modern-product-block">
+                    <div class="modern-product-circle"></div>
+                  </div>
+                </div>
+                <span class="modern-product-title">Best overview</span>
+              </div>
+            </a>
+            <div class="modern-product-addon modern-product-fadein">
+              <span>
+                Get the perfect overview over all your stocks. You can also sort them differently and group and filter them by certain critery. Never miss a price change of any stock anymore.
+              </span>
+            </div>
+          </li>
+          <li>
+            <a href="#modern-product-tabs-2">
+              <div class="modern-product-tag">
+                <div class="modern-product-icon">
+                  <div class="modern-product-block">
+                    <div class="modern-product-circle"></div>
+                  </div>
+                </div>
+                <span class="modern-product-title">Individual Information</span>
+              </div>
+            </a>
+            <div class="modern-product-addon">
+              <span>
+                Get all necessary information for every stock and every company. You can also customize and add or remove parts in which you are not interested. Of course you also get a beautiful stock price chart.
+              </span>
+            </div>
+          </li>
+          <li>
+            <a href="#modern-product-tabs-3">
+              <div class="modern-product-tag">
+                <div class="modern-product-icon">
+                  <div class="modern-product-block">
+                    <div class="modern-product-circle"></div>
+                  </div>
+                </div>
+                <span class="modern-product-title">Crypto Coins</span>
+              </div>
+            </a>
+            <div class="modern-product-addon">
+              <span>
+                Additionally you can also track over 900 of the most important crypto coins. You can get additional information to their performance and current price and price change.
+              </span>
+            </div>
+          </li>
+        </ul>
+        <div class="modern-product-browser">
+          <div class="modern-product-top-bar">
+            <div class="modern-dots-wrapper">
+              <div class="modern-product-dot"></div>
+              <div class="modern-product-dot"></div>
+              <div class="modern-product-dot"></div>
+            </div>
+          </div>
+          <div id="modern-product-tabs-1"></div>
+          <div id="modern-product-tabs-2"></div>
+          <div id="modern-product-tabs-3"></div>
+        </div>
+      </div>
+
     </section>
+
+    <!-- section pricing -->
     <section class="et-slide" id="tab-react">
-      <h1>Company</h1>
-      <h3>something about the history of company</h3>
+      <div class="pricing-cards-wrapper">
+        <div class="row">
+          <div class="pricing-cards">
+            <div class="col-sm-4 col-xs-12">
+              <div class="pricing-card">
+                <div class="pricing-header">
+                  <span class="pricing-price">$10</span>
+                  <span class="pricing-name">Alpha Pack</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>Complete documentation</li>
+                  <li>Working materials in PSD and Sketch format</li>
+                </ul>
+                <button class="pricing-button">Add to cart</button>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xs-12">
+              <div class="pricing-card">
+                <div class="pricing-header">
+                  <span class="pricing-price">$25</span>
+                  <span class="pricing-name">Beta Pack</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>Complete documentation</li>
+                  <li>Working materials in PSD, Sketch and EPS format</li>
+                  <li>6 months access to the library</li>
+                </ul>
+                <button class="pricing-button">Add to cart</button>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xs-12">
+              <div class="pricing-card">
+                <div class="pricing-header">
+                  <span class="pricing-price">$50</span>
+                  <span class="pricing-name">Charlie Pack</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>Complete documentation</li>
+                  <li>Working materials in PSD, Sketch and EPS format</li>
+                  <li>1 year access to the library</li>
+                  <li>2GB cloud storage</li>
+                </ul>
+                <button class="pricing-button">Add to cart</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="et-slide" id="tab-angular">
+
+
+    <section class="et-slide" id="tab-angular" style="background: #e8e8e8;">
       <h1>About</h1>
-      <h3>something about the employees of the company</h3>
+      <h3>A young company with a great vision and a perfect team. We have the.</h3>
     </section>
+
+
     <section class="et-slide" id="tab-other">
       <h1>Contact</h1>
       <h3>contact details</h3>
     </section>
+
   </div>
 
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
   <script>
     class StickyNavigation {
 
@@ -126,4 +253,25 @@
     }
 
     new StickyNavigation();
-  </script>
+
+// <!-- product script -->
+$(function() {
+  $('#modern-product-tabs').tabs({
+    show: { effect: 'blind', direction: 'right', duration: 300 }
+  });
+
+  $('#accordion').accordion();
+
+  var btn = $('#accordion li a');
+  var wrapper = $('#accordion li');
+
+  $(btn).on('click', function() {
+    $(btn).removeClass('modern-product-active');
+    $(btn).parent().find('.modern-product-addon').removeClass('modern-product-fadein');
+
+    $(this).addClass('modern-product-active');
+    $(this).parent().find('.modern-product-addon').addClass('modern-product-fadein');
+  });
+});
+
+</script>
