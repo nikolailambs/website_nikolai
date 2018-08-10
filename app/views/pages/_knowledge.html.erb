@@ -41,8 +41,7 @@
 
   <!-- knowledge icon background -->
   <% @icon_array.each_with_index do |icon, index| %>
-    <%= image_tag("#{icon}.png", class:"background-icon #{@opacity[index]}-opacity", :style => "top: #{@rand_top[index]}%; left: #{@rand_left[index]}%") %>
-  <!-- <img src="https://res.cloudinary.com/dcmqib0ib/image/upload/w_80/v1532895216/<%#= i %>.png" alt=""> -->
+    <img src="https://res.cloudinary.com/dcmqib0ib/image/upload/w_80/v1532895216/<%= icon %>.png" class="background-icon <%= @opacity[index] %>-opacity" style="top: <%= @rand_top[index] %>%; left: <%= @rand_left[index] %>%" alt="">
   <% end %>
 
 </div>
