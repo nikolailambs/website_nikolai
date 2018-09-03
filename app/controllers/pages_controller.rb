@@ -16,6 +16,6 @@ class PagesController < ApplicationController
     @icon_array = ["sql", "ruby", "rails", "js", "html", "git", "css", "bootstrap"]
     @opacity = ["less", "less", "strong", "less", "less", "strong", "less", "strong"]
     @rand_top = [50, 25, 54, 86, 7, 70, 4, 97]
-    @rand_left = [0, 45, 98, 0, 4, 54, 86, 91]
+    @rand_left = [3, 45, 84, 5, 4, 54, 86, 78]
   end
 end
