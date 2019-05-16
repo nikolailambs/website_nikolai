@@ -8,23 +8,17 @@ h2 {
   left: 30px;
 }
 
-.example-page-header {
+.about-page-header {
   display: flex;
-  justify-content: center;
+  padding-left: 50px;
   width: 100%;
   color: #404040;
   font-weight: bold;
 }
 
-.contact-page-header {
-  text-align: center;
-  color: #404040;
-  font-weight: bold;
-}
-
-.about-page-header {
+.example-page-header {
   display: flex;
-  justify-content: center;
+  padding-left: 50px;
   width: 100%;
   color: #404040;
   font-weight: bold;
@@ -32,10 +26,15 @@ h2 {
 
 .timeline-page-header {
  display: flex;
- justify-content: center;
+ padding-left: 50px;
  width: 100%;
  color: #404040;
  font-weight: bold;
+}
+.contact-page-header {
+  text-align: center;
+  color: #404040;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 701px) {
