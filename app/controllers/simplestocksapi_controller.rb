@@ -3,16 +3,7 @@ class PrivacyController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @earnings = {
-      :mostAnticipatedEarnings => {
-        moday: ['etsy', 'mdr', 'kos', 'rrc', 'ten', 'htz', 'shak', 'awi', 'twou'],
-        tuesday: ['m', 'panw', 'vcel', 'axon'],
-        wednesday: ['test'],
-        thursday: ['test'],
-        friday: ['test'],
-        },
-      }
-    }
+    @earnings = 1
   end
 
   def show
