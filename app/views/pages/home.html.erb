@@ -8,18 +8,14 @@
 <script>
   window.sr = ScrollReveal();
     // elements reveal
-    sr.reveal('.scroll-reveal-box', { duration: 3000 ,reset: true });
+    sr.reveal('.scroll-reveal-box', { duration: 1000 ,reset: true });
 
 
     // knowledge-reveal
-    var i = 500;
+    var i = 300;
     $('.element-reveal-box').each(function(){
       sr.reveal($(this), {duration: i, reset: true});
-      if (i = 2000) {
-        i = 500;
-      }else{
-        i += 500;
-      };
+        i += 300;
     });
 
   </script>

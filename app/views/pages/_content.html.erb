@@ -21,22 +21,13 @@
 
   <!-- example section -->
   <div class="examples-wrapper scroll-reveal-box" id="example-anchor">
-    <h2 class="example-page-header">Example pages</h2>
+    <h2 class="example-page-header">Projects</h2>
     <div class="example-bar">
       <nav class="fill">
         <ul class="example-list list-inline">
           <div class="row" style="width: 100%;">
-            <% @examples.each do |example| %>
-            <%= link_to example do %>
-            <div class="col-md-6 col-sm-12 example-list-item-position video element-reveal-box">
-              <li class="list-inline-item <%= example.name %> example-list-hover">
-                <% url = "https://res.cloudinary.com/dcmqib0ib/video/upload/v1532352822/#{example.name.downcase}.mov" %>
-                <video src="<%= url %>"></video>
-                <div class="example-description"><p class="example-description-text"><%= example.name %></p></div>
-              </li>
-            </div>
-            <% end %>
-            <% end %>
+            <%= render 'projects' %>
+
           </div>
         </ul>
       </nav>
