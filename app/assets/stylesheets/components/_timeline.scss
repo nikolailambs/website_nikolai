@@ -220,7 +220,7 @@ Modules - reusable parts of our design
     @include clearfix;
 
     h2 {
-      font-family: 'Rubik', sans-serif;
+      font-family: Nunito;
       letter-spacing: 3px;
       color: $color-1;
       font-size: 24px !important;
@@ -228,7 +228,7 @@ Modules - reusable parts of our design
 
     p, .cd-read-more, .cd-date {
       font-size: 25px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: Nunito;
     }
 
     .cd-read-more, .cd-date {

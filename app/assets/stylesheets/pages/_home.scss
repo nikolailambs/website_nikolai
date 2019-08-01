@@ -38,14 +38,14 @@
   font-size: 50px;
   font-weight: bold;
   color: $light_blue;
-  font-family: 'Rubik', sans-serif;
+  font-family: Nunito;
 }
 .banner span {
   font-size: 25px;
   color: #333333;
   opacity: 0.6;
   margin-bottom: 30px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Nunito;
 }
 
 .content-container {
@@ -192,7 +192,7 @@ nav.fill ul li a:hover:after {
 .example-description-text {
   text-align: center;
   font-size: 26px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Nunito;
   letter-spacing: 1px;
   transition: all 1s ease;
 }
