@@ -1,21 +1,7 @@
 
 <div class="own-container">
+
+  <img class="logo" style="width: 70px;position: fixed;z-index: 100;top: 10px;right: 10px;" src="https://res.cloudinary.com/dcmqib0ib/image/upload/v1564836954/nikolai_logo_2.png" alt="">
+
   <%= render 'content' %>
 </div>
-
-
-
-<script>
-  window.sr = ScrollReveal();
-    // elements reveal
-    sr.reveal('.scroll-reveal-box', { duration: 1500 ,reset: true });
-
-
-    // knowledge-reveal
-    var i = 400;
-    $('.element-reveal-box').each(function(){
-      sr.reveal($(this), {duration: i, reset: true});
-        i += 400;
-    });
-
-  </script>

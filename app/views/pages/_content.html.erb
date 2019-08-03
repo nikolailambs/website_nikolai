@@ -5,7 +5,7 @@
 <div class="content-container">
 
   <!-- about box -->
-  <div class="scroll-box scroll-reveal-box">
+  <div class="scroll-box">
     <h2 class="about-page-header">About</h2>
     <div class="page-box big-box">
       <div class="row">
@@ -20,7 +20,7 @@
   </div>
 
   <!-- example section -->
-  <div class="examples-wrapper scroll-reveal-box" id="example-anchor">
+  <div class="examples-wrapper" id="example-anchor">
     <h2 class="example-page-header">Projects</h2>
     <div class="example-bar">
       <nav class="fill">
@@ -38,7 +38,7 @@
   <%= render 'knowledge' %>
 
   <!-- contact info -->
-  <div class="contact-info scroll-reveal-box">
+  <div class="contact-info">
     <div class="contact-text-wrapper">
       <h2 class="contact-page-header">Feel free to contact me</h2>
       <nav class="fill contact-info-wrapper">
@@ -52,17 +52,3 @@
   </div>
 
 </div>
-
-
-<script>
-  $(".video").hover( hoverVideo, hideVideo );
-
-  function hoverVideo() {
-    $('video', this).get(0).play();
-  }
-
-  function hideVideo() {
-    $('video', this).get(0).pause();
-  }
-
-</script>
