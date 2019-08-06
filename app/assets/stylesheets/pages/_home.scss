@@ -165,7 +165,7 @@ nav.fill ul li a:hover:after {
   100% {
     width: 100%;
     height: 100%;
-    background: #FEA73A;
+    background: $light_blue;
   }
 }
 
@@ -221,6 +221,7 @@ nav.fill ul li a:hover:after {
 
 
 @media screen and (min-width: 701px) {
+
   .contact-mail-link {
     font-size: 30px;
   }
@@ -274,3 +275,73 @@ nav.fill ul li a:hover:after {
 .about-span {
   transition: all 1s ease;
 }
+
+
+
+
+.styles_hero__2wCC9 {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/*animated text*/
+
+
+/*#s-text {
+  font: 16em/1 Arial;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 10px;
+  animation: stroke-offset 8s infinite;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #d43e3d;
+  stroke-dashoffset: 7%;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #d43e3d;
+  stroke-dashoffset: 14%;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #d43e3d;
+  stroke-dashoffset: 21%;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #d43e3d;
+  stroke-dashoffset: 28%;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #d43e3d;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes stroke-offset {
+  20% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  } }
+
+
+*/
+
+
+

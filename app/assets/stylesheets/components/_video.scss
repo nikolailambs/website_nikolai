@@ -22,9 +22,17 @@
      opacity: 0.8;
      transition: all 1s ease;
    }
-   .example-list-hover:hover .example-description-text {
+   .example-list-hover:hover .text-LambsdorffArchitektur {
     color: #f7f7f7;
-    background-color: #88CCF1;
+    background-color: #5f5f5f;
+  }
+  .example-list-hover:hover .text-SimpleStocks {
+    color: #f7f7f7;
+    background-color: #8898FF;
+  }
+  .example-list-hover:hover .text-EmojiStocks {
+    color: #f7f7f7;
+    background-color: #b73990;
   }
   .example-list-hover:hover img {
     opacity: 1;
