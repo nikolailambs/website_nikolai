@@ -1,11 +1,18 @@
 <div class="text-wrapper">
   <div id="home-page-header" class="">
     <!-- <img class="my-img" style="width: 100%;height: 100vh;" src="https://res.cloudinary.com/dcmqib0ib/image/upload/v1533235786/anzeige.jpg" alt=""> -->
-    <h2 id="particle-move" class="particle-header" style="position: absolute; top: 30%;">spice dev studio <🌶>.</h2>
+    <h2 id="particle-move" class="particle-header" style="position: absolute; top: 30%;"><span class="bounce-in-on-hover list-text-hover"><🌶></span><span class="visible-on-hover" style="padding-left: 25px;">spice dev studio.</span></h2>
     <h2 class="particle-header particle-header-two">
-      we love creating <!-- <span style="color: #f4f4f4; background-color: #FEA73A;"> -->🔥 products<!-- </span> --> and <!-- <span style="color: #f4f4f4;background-color: #ED5863;"> -->🌟 apps<!-- </span> -->.</h2>
+      we love creating <span class="bounce-in-on-hover list-text-hover">🔥</span> <span class="visible-on-hover" style="padding-left: 5px;">products and</span> <span class="bounce-in-on-hover list-text-hover">🌟</span> <span class="visible-on-hover" style="padding-left: 5px;"> apps</span>.</h2>
 
-      <!-- <h2 class="styles_tagline__1Uf9o"><span style="z-index: 9; transform: translate3d(0px, 0px, 0px);">No</span><span style="z-index: 8; transform: translate3d(0px, 0px, 0px);">bullshit.</span><span style="z-index: 7; transform: translate3d(0px, 0px, 0px);">We</span><span style="z-index: 6; transform: translate3d(0px, 0px, 0px);">just</span><span style="z-index: 5; transform: translate3d(0px, 0px, 0px);">craft</span><span style="z-index: 4; transform: translate3d(0px, 0px, 0px);">interactive</span><span style="z-index: 3; transform: translate3d(0px, 0px, 0px);">content</span><span style="z-index: 2; transform: translate3d(0px, 0px, 0px);">for</span><span style="z-index: 1; transform: translate3d(0px, 0px, 0px);">brands.</span></h2> -->
+
+
+    <ul class="visible-md visible-lg" style="list-style: none;position: absolute;right: 100px;top: 30%;line-height: 50px;font-size: 25px;">
+      <li style="display: flex;"><span class="bounce-in-on-hover list-text-hover">🖌</span><span class="visible-on-hover" style="padding-left: 10px;">designing</span></li>
+      <li style="display: flex;"><span class="bounce-in-on-hover list-text-hover">📝</span><span class="visible-on-hover" style="padding-left: 10px;">developing</span></li>
+      <li style="display: flex;"><span class="bounce-in-on-hover list-text-hover">📮</span><span class="visible-on-hover" style="padding-left: 10px;">publishing</span></li>
+    </ul>
+
 
   </div>
   <button type="button" class="scroll_down" id="scroll_down"></button>
@@ -13,39 +20,18 @@
 
 
 
-<!--
+
 <script>
-  $( "#home-page-header" ).mousemove(function( event ) {
-    msg = event.pageX + ", " + event.pageY;
-    console.log(msg);
 
-    $("#particle-move").css({"transform": `translate3d(${event.pageX}px, ${event.pageY}px, 0px)`})
-    $("#particle-move").css({"top": '0%'})
-
-    // $(".styles_tagline__1Uf9o span").each((item)=>{ $(item).css({"transform": `translate3d(${event.pageX}px, ${event.pageY}px, 0px)`}) })
-
-  });
-
-  $( "#home-page-header" ).mouseleave(function() {
-    $("#particle-move").css({"transform": `translate3d(0px, 0px, 0px)`})
-    $("#particle-move").css({"top": '30%'})
-  });
+  $('.list-text-hover').mouseover((item)=> console.log( $(item.target).parent().children('.visible-on-hover').css('opacity', '1') ) )
 
 
-  var wto;
-
-  $('#select').change(function() {
-    clearTimeout(wto);
-    wto = setTimeout(function() {
-      // do stuff when user has been idle for 1 second
-    }, 1000);
-  });
+</script>
 
 
 
 
 
-</script> -->
 
 
 <script>
@@ -169,10 +155,8 @@ $(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll > position) {
     $('#scroll_down').fadeOut(1500)
-    $('#logo').fadeIn(1000)
   } else {
     $('#scroll_down').fadeIn(1500)
-    $('#logo').fadeOut(1000)
   }
   position = scroll;
 });

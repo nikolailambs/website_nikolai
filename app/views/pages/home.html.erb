@@ -2,7 +2,35 @@
 <div class="own-container">
 
   <!-- <img class="logo" style="width: 70px;position: fixed;z-index: 100;top: 10px;right: 10px;" src="https://res.cloudinary.com/dcmqib0ib/image/upload/v1564836954/nikolai_logo_2.png" alt=""> -->
-  <p id="logo" style="display: none; font-size: 30px;position: fixed;z-index: 100;top: 20px;right: 40px;">🌶</p>
+  <p id="logo" class="box" style="display: none; font-size: 30px; position: fixed; z-index: 100; top: 20px; right: 40px;">🌶</p>
 
   <%= render 'content' %>
 </div>
+
+<script>
+
+  var topofDiv = $("#particle-move").offset().top; //gets offset of header
+  var height = $("#particle-move").outerHeight(); //gets height of header
+
+  $(window).scroll(function(){
+      if($(window).scrollTop() > (topofDiv + height)){
+         $("#logo").fadeIn(500);
+      }
+      else{
+         $("#logo").fadeOut(500);
+      }
+  });
+
+
+//   $(function(){
+//   $(window).scroll(function(){
+//     $('.box').each(function(){
+//       $(this).css('top', $(window).scrollTop()/$(document).height() * $(window).height()* 1.2);
+//       console.log($(window).scrollTop())
+//       console.log($(window).height())
+//       console.log($(window).scrollTop()/$(document).height())
+//     });
+//   });
+// })
+
+</script>

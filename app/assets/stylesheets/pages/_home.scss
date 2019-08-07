@@ -1,3 +1,8 @@
+body ::selection {
+    background-color: #d43e3d;
+    color: #fff;
+}
+
 .black-body-background {
   background-color: #090001;
   color: white;
@@ -19,6 +24,7 @@
   height: 100%;
   width: 100%;
 }
+
 
 .row {
   margin-left: 0;
@@ -231,8 +237,8 @@ nav.fill ul li a:hover:after {
   }
   .big-box:hover {
     .my-img {
-      filter: grayscale(30%) contrast(120%);
-      -webkit-filter: grayscale(30%) contrast(120%); /*Safari*/
+      /*filter: grayscale(30%) contrast(120%);*/
+      /*-webkit-filter: grayscale(30%) contrast(120%);*/
     }
     .about-span {
       color: #f7f7f7;
