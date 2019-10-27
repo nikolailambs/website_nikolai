@@ -22,25 +22,6 @@
 }
 
 
-.bounce-in-on-hover {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-.bounce-in-on-hover:hover,
-.bounce-in-on-hover:focus,
-.bounce-in-on-hover:active {
-  -webkit-transform: scale(1.6);
-  transform: scale(1.6);
-  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-}
-
-
 
 @media screen and (min-width: 701px) {
   .knowledge-text {
