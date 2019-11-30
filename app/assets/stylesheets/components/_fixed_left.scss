@@ -1,0 +1,35 @@
+.contact-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 45%;
+  background-color: #4141ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-contact-text {
+  text-align: center;
+  a {
+    color: white;
+    font-size: 20px;
+    transition: all 0.5s ease;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.my-img {
+  filter: grayscale(100%) contrast(120%);
+  object-fit: cover;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  box-shadow: -3px -3px #acacac;
+}
+

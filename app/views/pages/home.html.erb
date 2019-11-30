@@ -1,30 +1,27 @@
 
 
+<div style="margin-left: 50%;">
 
-<div class="own-container">
+  <section id="about" class="content-section" style="min-height: 100vh">
+    <h2>About</h2>
+    <div class="about-text">
+      <p>
+        I have an engineering and finance background. I studied mechanical engineering and business administration with focus  on finance and venture capital at the Technical University Munich. <br>I learned software development during an intensive coding bootcamp in 2017. Since then I have developed several own ideas as well as business websites for individuals and corporations. <br>Beside that I have worked in several industries including private banking, ecommerce SaaS, and venture capital.
+    </p>
+    </div>
+  </section>
 
-  <!-- <img class="logo" style="width: 70px;position: fixed;z-index: 100;top: 10px;right: 10px;" src="https://res.cloudinary.com/dcmqib0ib/image/upload/v1564836954/nikolai_logo_2.png" alt=""> -->
-<!--   <p id="logo" class="box" style="display: none; font-size: 30px; position: fixed; z-index: 100; top: 20px; right: 40px;">🌶</p>
- -->
-  <%= render 'content' %>
+
+  <section id="projects" class="content-section">
+    <h2>Projects</h2>
+    <%= render 'projects' %>
+  </section>
+
+
+  <section id="knowledge" class="content-section" style="min-height: 100vh; position: relative;">
+    <h2 style="margin-top: 100px;">Knowledge</h2>
+    <%= link_to 'Impressum', impressum_path, class: "impressum-link" %>
+  </section>
+
 </div>
 
-<script>
-
-  var topofDiv = $("#particle-move").offset().top; //gets offset of header
-  var height = $("#particle-move").outerHeight(); //gets height of header
-
-
-
-//   $(function(){
-//   $(window).scroll(function(){
-//     $('.box').each(function(){
-//       $(this).css('top', $(window).scrollTop()/$(document).height() * $(window).height()* 1.2);
-//       console.log($(window).scrollTop())
-//       console.log($(window).height())
-//       console.log($(window).scrollTop()/$(document).height())
-//     });
-//   });
-// })
-
-</script>
