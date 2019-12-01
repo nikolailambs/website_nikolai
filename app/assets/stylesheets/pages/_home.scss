@@ -2,6 +2,10 @@ h2 {
   font-size: 50px;
   font-family: Nunito;
 }
+h4 {
+  font-family: Nunito;
+  font-weight: bold;
+}
 
 body {
   font-family: Nunito;
@@ -20,6 +24,24 @@ a {
   }
 }
 
+
+
+/*on desctop devices*/
+@media screen and (min-width: 900px) {
+  .section-margin {
+    margin-left: 50%;
+  }
+}
+
+/*on small devices*/
+@media screen and (max-width: 899px)  {
+  .section-margin {
+    margin-left: 10%;
+  }
+}
+
+
+
 .about-text   {
   display: flex;
   justify-content: center;
@@ -37,6 +59,27 @@ a {
 
   &:hover {
     color: #4141ff;
+  }
+}
+
+
+#knowledge {
+  ul {
+    margin-top: 70px;
+    margin-left: 20%;
+
+    li {
+      display: flex;
+      margin: 7px;
+      font-size: 20px;
+
+      div {
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }
 

@@ -1,9 +1,4 @@
 .contact-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 45%;
   background-color: #4141ff;
   color: white;
   display: flex;
@@ -11,12 +6,36 @@
   align-items: center;
 }
 
+/*on desctop devices*/
+@media screen and (min-width: 900px) {
+  .contact-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+  }
+}
+
+/*on small devices*/
+@media screen and (max-width: 899px)  {
+  .contact-wrapper {
+    height: 90vh;
+  }
+}
+
+
+
 .left-contact-text {
   text-align: center;
   a {
     color: white;
     font-size: 20px;
     transition: all 0.5s ease;
+
+    &:hover {
+      color: #070707;
+    }
   }
   p {
     color: white;
