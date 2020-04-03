@@ -74,3 +74,14 @@
 
 </div>
 
+
+<script>
+  $(function () {
+    $(document).scroll(function () {
+      var $leftSide = $(".contact-wrapper");
+      $leftSide.toggleClass( 'scrolledTwo', $(this).scrollTop() > $('#about').height() );
+      $leftSide.toggleClass( 'scrolledThree', $(this).scrollTop() > $('#about').height() + $('#projects').height() );
+    });
+  });
+</script>
+

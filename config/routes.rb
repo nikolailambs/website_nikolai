@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  resources :codings
-  resources :playfuls
-  resources :arts
-  resources :classics
-  resources :examples
   resources :privacy
   resources :simplestocksapi
   devise_for :users

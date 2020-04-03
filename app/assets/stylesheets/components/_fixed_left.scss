@@ -4,6 +4,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 200ms linear;
+}
+
+.contact-wrapper.scrolledTwo {
+  background-color: #12100E !important;
+}
+.contact-wrapper.scrolledThree {
+  background-color: #F18805 !important;
+  /*#FF3E41*/
 }
 
 /*on desctop devices*/

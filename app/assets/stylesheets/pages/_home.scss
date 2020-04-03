@@ -13,8 +13,9 @@ body {
 }
 
 body ::selection {
-    background-color: #d43e3d;
+    background-color: #525252;
     color: #fff;
+    /*#d43e3d*/
 }
 
 a {
@@ -46,7 +47,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
   line-height: 40px;
   margin-top: 60px;
 }
@@ -71,7 +72,7 @@ a {
     li {
       display: flex;
       margin: 7px;
-      font-size: 20px;
+      font-size: 24px;
 
       div {
         width: 35px;

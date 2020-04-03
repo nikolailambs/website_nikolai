@@ -1,2 +1,0 @@
-class Classic < ApplicationRecord
-end
