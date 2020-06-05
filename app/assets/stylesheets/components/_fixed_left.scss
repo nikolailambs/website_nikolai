@@ -1,5 +1,5 @@
 .contact-wrapper {
-  background-color: #4141ff;
+  background-color: black;
   color: white;
   display: flex;
   justify-content: center;
@@ -7,12 +7,6 @@
   transition: background-color 200ms linear;
 }
 
-/*.contact-wrapper.scrolledTwo {
-  background-color: #12100E !important;
-}
-.contact-wrapper.scrolledThree {
-  background-color: #F18805 !important;
-}*/
 
 /*on desctop devices*/
 @media screen and (min-width: 900px) {
@@ -40,10 +34,9 @@
     color: white;
     font-size: 20px;
     transition: all 0.5s ease;
-    text-decoration: none;
 
     &:hover {
-      color: #070707;
+      color: white;
     }
   }
   p {
@@ -53,12 +46,25 @@
 }
 
 .my-img {
-  filter: grayscale(100%) contrast(120%);
+  filter: grayscale(100%) contrast(150%);
   object-fit: cover;
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  /*box-shadow: -3px -3px #acacac;*/
-  border: 3px solid #505050;
 }
+
+/*on desctop devices*/
+@media screen and (min-width: 900px) {
+  .my-img {
+    width: 35vw;
+    height: 35vw;
+  }
+}
+
+/*on small devices*/
+@media screen and (max-width: 899px)  {
+  .my-img {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+
 
