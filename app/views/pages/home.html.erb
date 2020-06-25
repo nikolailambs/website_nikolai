@@ -1,87 +1,182 @@
+<div>
+  <div id="header" class="wrapper">
+    <div class="container">
 
 
-<div class="section-margin">
+      <div class="header" style="margin-top: 100px">
 
-  <section id="about" class="content-section" style="min-height: 100vh">
-    <h2>About</h2>
-    <div class="about-text">
-      <div>
-      <h4>I am a software and web developer with a passion for design and the expertise to build a complex and scalable backend infrastructure.</h4>
-      <p>I have an <strong>engineering and finance</strong> background. I studied mechanical engineering and business administration with focus  on finance and venture capital at the <strong>Technical University Munich</strong>. <br>I learned software development during an intensive coding bootcamp in 2017.<br>Since then I have developed a number of own ideas as well as business websites for individuals and corporations. <br>I have worked in <strong>several industries</strong> including private banking, ecommerce SaaS, and venture capital.</p>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h4>Hi, I'm Nikolai.</h4>
+            <h1>I am a venture capitalist and software developer with great passion for design and technology.</h1>
+          </div>
+
+          <div class="col-sm-12 col-md-6">
+            <div class="header-image">
+              <%#= cl_image_tag 'nikolai' %>
+              <div class="lazy-img" data-src="<%= cl_image_path 'nikolai' %>">
+                <%= cl_image_tag 'nikolai', dpr:1.0, width: 200, height: 100, class: "research-card-image blur lazy-global-img-class" %>
+                <noscript>
+                  <%= cl_image_tag 'nikolai', class:"lazy-global-img-class" %>
+                </noscript>
+              </div>
+              <!-- <div id="parallelogram"></div> -->
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
-  </section>
+  </div>
 
+  <div id="knowledge" class="wrapper">
+    <div class="container">
+      <h2 class="section-title" style="color: #ff6161; background-color: rgba(255, 97, 97, .1);">What I Do</h2>
 
-  <section id="projects" class="content-section">
-    <h2>Projects</h2>
-    <%= render 'projects' %>
-  </section>
+      <div class="knowledge-wrapper">
+        <div class="row">
 
+          <div class="col-sm-6 col-md-4">
+            <div class="knowledge-item-wrapper">
+              <%= cl_image_tag 'show-hat-magician-1', class: "knowledge-icon" %>
+              <h4>Venture Capital</h4>
+              <p>This is a short description</p>
+            </div>
+          </div>
 
-  <section id="knowledge" class="content-section" style="min-height: 100vh; position: relative;">
-    <h2 style="margin-top: 100px;">Knowledge</h2>
+          <div class="col-sm-6 col-md-4">
+            <%= cl_image_tag 'coffee-machine', class: "knowledge-icon" %>
+            <h4>Web & App Development</h4>
+            <p>This is a short description</p>
+          </div>
 
+          <div class="col-sm-6 col-md-4">
+            <%= cl_image_tag 'warehouse-cart-packages', class: "knowledge-icon" %>
+            <h4>Blockchain Technology</h4>
+            <p>This is a short description</p>
+          </div>
 
-    <ul>
-      <li>
-        <div><i class="fab fa-html5"></i></div> HTML
-      </li>
-      <li>
-        <div><i class="fab fa-css3-alt"></i></div> CSS
-      </li>
-      <li>
-        <div><i class="fas fa-gem"></i></div> Ruby
-      </li>
-      <li>
-        <div><i class="fas fa-database"></i></div> SQL
-      </li>
-      <li>
-        <div><i class="fas fa-subway"></i></div> Rails
-      </li>
-      <li>
-        <div><svg style="width: 22px;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bootstrap" class="svg-inline--fa fa-bootstrap fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M292.3 311.93c0 42.41-39.72 41.43-43.92 41.43h-80.89v-81.69h80.89c42.56 0 43.92 31.9 43.92 40.26zm-50.15-73.13c.67 0 38.44 1 38.44-36.31 0-15.52-3.51-35.87-38.44-35.87h-74.66v72.18h74.66zM448 106.67v298.66A74.89 74.89 0 0 1 373.33 480H74.67A74.89 74.89 0 0 1 0 405.33V106.67A74.89 74.89 0 0 1 74.67 32h298.66A74.89 74.89 0 0 1 448 106.67zM338.05 317.86c0-21.57-6.65-58.29-49.05-67.35v-.73c22.91-9.78 37.34-28.25 37.34-55.64 0-7 2-64.78-77.6-64.78h-127v261.33c128.23 0 139.87 1.68 163.6-5.71 14.21-4.42 52.71-17.98 52.71-67.12z"></path></svg></div> Bootstrap
-      </li>
-      <li>
-        <div><i class="fab fa-git-square"></i></div> git
-      </li>
-      <li>
-        <div><i class="fab fa-github"></i></div> GitHub
-      </li>
-      <li>
-        <div><i class="fab fa-java"></i></div> Java
-      </li>
-      <li>
-        <div><i class="fab fa-js-square"></i></div> JavaScript
-      </li>
-      <li>
-        <div><i class="fas fa-dollar-sign"></i></div> jQuery
-      </li>
-      <li>
-        <div><i class="fab fa-react"></i></div> React
-      </li>
-      <li>
-        <div><i class="fas fa-mobile"></i></div> ReactNative
-      </li>
-    </ul>
+        </div>
+    </div>
 
-
-
-
-
-    <%= link_to 'Impressum', impressum_path, class: "impressum-link" %>
-  </section>
-
+  </div>
 </div>
 
 
+<div id="about" class="wrapper">
+  <div class="container">
+    <h2 class="section-title" style="color: #622aff; background-color: rgba(98, 42, 255, .1);">About Me</h2>
+    <div class="about-text">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-6">
+          <h4 class="text-hover" data-img="one">I am currently working at Signature Ventures. We are one of the leading early stage venture funds dedicated to distributed ledger technology in Europe.</h4>
+
+          <p class="text-hover" data-img="two">I have an <strong>engineering and finance</strong> background. I studied mechanical engineering and business administration with focus on finance and venture capital at the Technical University Munich. I learned <strong>software development</strong> during an intensive coding bootcamp in 2017.</p>
+          <p class="text-hover" data-img="three">Since then I have developed a number of own ideas as well as business websites for individuals and corporations. I have published one iOS app in the AppStore and am currently working on the second one.</p>
+          <p class="text-hover" data-img="four">Beside studying I have gained over two years work experience in several in several industries including private banking, ecommerce SaaS, and venture capital.</p>
+          <p class="text-hover" data-img="five">I have come into contact with <strong>blockchain technology</strong> while learning coding. Afterwards I have significantly deepened my knowledge during supporting the Earlybird Investment team in the area of blockchain and fintech. After writing my bachelor thesis about the intersection between blockchain and <strong>venture capital</strong> I have started working for Signature Ventures. I considerably contributed to building up this venture fund from scratch.</p>
+        </div>
+
+        <div class="col-md-12 col-lg-6">
+          <%#= cl_image_tag 'nikolai_bw', class: "about-image" %>
+          <div class="logo-wrapper">
+            <%= cl_image_tag 'tum', :effect=>"colorize", :color=>"#323232", class: "about-logo two" %>
+          </div>
+          <div class="logo-wrapper">
+            <%= cl_image_tag 'lewagon', :effect=>"colorize", :color=>"#323232", class: "about-logo two" %>
+          </div>
+          <div class="logo-wrapper">
+            <%= cl_image_tag 'appstore', :effect=>"colorize", :color=>"#323232", class: "about-logo three", style: "border-radius: 15px;" %>
+          </div>
+          <div class="logo-wrapper">
+            <%= cl_image_tag 'newstore', :effect=>"colorize", :color=>"#323232", class: "about-logo four" %>
+          </div>
+          <div class="logo-wrapper">
+            <%= cl_image_tag 'eb', :effect=>"colorize", :color=>"#323232", class: "about-logo five" %>
+          </div>
+          <div class="logo-wrapper">
+            <%= cl_image_tag 'sv', :effect=>"colorize", :color=>"#323232", class: "about-logo one five" %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="projects" class="wrapper">
+  <div class="container">
+    <h2 class="section-title" style="color: #0b9e43; background-color: rgba(11, 158, 67, .1);">My Projects</h2>
+    <div class="projects-wrapper">
+
+      <% @projects.each do |project| %>
+        <style>
+           .<%= project.name %>-card:hover {
+              background-color: <%= project.color %>;
+            }
+        </style>
+
+        <div class="project-card <%= project.name %>-card">
+          <div class="row">
+            <div class="col-sm-12 col-md-7">
+              <div>
+                <h3><%= project.title %></h3>
+                <p><%= project.description %></p>
+                <%#= project.category %>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-5">
+              <%= cl_image_tag project.name, width: 400 %>
+            </div>
+          </div>
+
+          <a
+            <% if project.link != "" %>
+              href="<%= project.link %>"
+            <% end %>
+          style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" target="_blank"></a>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div id="contact" class="wrapper">
+  <div class="container">
+    <h2 class="section-title" style="color: #3270ff; background-color: rgba(50, 112, 255, .1);">Contact Me</h2>
+
+  </div>
+</div>
+
+
+
+<%= link_to 'Impressum', impressum_path, class: "impressum-link" %>
+
+
+
 <script>
-  $(function () {
-    $(document).scroll(function () {
-      var $leftSide = $(".contact-wrapper");
-      $leftSide.toggleClass( 'scrolledTwo', $(this).scrollTop() > $('#about').height() );
-      $leftSide.toggleClass( 'scrolledThree', $(this).scrollTop() > $('#about').height() + $('#projects').height() );
-    });
+  window.addEventListener("load", function() {
+    let lazy = document.getElementsByClassName("lazy-img");
+    for (let n = 0, len = lazy.length; n < len; n++) {
+      lazy[n].children[0].setAttribute("src", lazy[n].getAttribute("data-src"));
+      lazy[n].children[0].addEventListener("load", function(e) {
+        e.target.classList.add("no-blur");
+      });
+    }
   });
 </script>
 
+
+<script>
+  $('.text-hover').hover(function() {
+    console.log($( this ).data( "img" ))
+    $(`.${$( this ).data( "img" )}`).toggleClass('image-filter')
+  });
+</script>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   resources :privacy
   resources :simplestocksapi
   devise_for :users

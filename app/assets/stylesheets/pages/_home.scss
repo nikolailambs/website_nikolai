@@ -1,22 +1,17 @@
 h2 {
   font-size: 50px;
-  font-family: Carneys;
-  color: #101010;
-}
-h4 {
   font-family: Nunito;
-  font-weight: bold;
 }
 
 body {
   font-family: Nunito;
-  background-color: white;
+  /*background-color: white;*/
+  background-color: #fbfbfb;
 }
 
 body ::selection {
-    background-color: black;
-    color: #fff;
-    /*#d43e3d*/
+  background-color: #e0e0e0;
+  /*#d43e3d*/
 }
 
 a {
@@ -27,61 +22,118 @@ a {
 }
 
 
+/*#parallelogram {
+  width: 370px;
+  height: 383px;
+  transform: skew(-23deg);
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  z-index: -1;
+  background: #0099ff;
+  border-radius: 20px;
+}*/
 
-/*on desctop devices*/
-@media screen and (min-width: 900px) {
-  .section-margin {
-    margin-left: 50%;
+.wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+.section-title {
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+
+
+.header-image {
+  position: relative;
+
+  img {
+    width: 100%;
   }
 }
 
-/*on small devices*/
-@media screen and (max-width: 899px)  {
-  .section-margin {
-    margin-left: 10%;
+
+/*KNOWLEDGE PART*/
+.knowledge-wrapper {
+  margin: 50px 0;
+
+  h4 {
+    margin: 25px 0;
+  }
+
+  p {
+    color: #8f8f8f;
   }
 }
 
+.knowledge-icon {
+  width: 70px;
+}
 
 
-.about-text   {
+/*ABOUT PART*/
+/*.about-image {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: contrast(1.1);
+  box-shadow: 14px 14px 0px #622aff;
+}*/
+
+.logo-wrapper {
+  width: 100%;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  line-height: 40px;
-  margin-top: 60px;
+  margin: 20px 0;
 }
 
-.impressum-link {
-  position: absolute;
-  bottom: 5px;
-  right: 15px;
-  color: gray;
+.about-logo {
+  max-height: 100%;
+  max-width: 200px;
+  transition: all 1s ease;
+}
+
+.image-filter {
+  filter: invert(11%) sepia(89%) saturate(6942%) hue-rotate(260deg) brightness(83%) contrast(131%);
+}
+
+
+/*PROJECTS PART*/
+.project-card {
+  margin: 50px 0;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  transition: all 1s ease;
+
+  img {
+    filter:grayscale(1);
+    border-radius: 10px;
+    width: 100%;
+    transition: all 1s ease;
+  }
 
   &:hover {
-    color: #4141ff;
-  }
-}
+    background-color: #0b9e430f;
 
-
-#knowledge {
-  ul {
-    margin-top: 70px;
-    margin-left: 20%;
-
-    li {
-      display: flex;
-      margin: 7px;
-      font-size: 24px;
-
-      div {
-        width: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    img {
+      filter: grayscale(0) !important;
     }
   }
 }
+
+
+
+
+
+
+
 
