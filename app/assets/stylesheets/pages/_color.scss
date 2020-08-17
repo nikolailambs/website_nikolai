@@ -1,0 +1,105 @@
+.Color {
+
+  h1, h2, h3 {
+    font-family: Hornbill;
+    line-height: 70px;
+  }
+
+  h2 {
+    font-family: BIG JOHN;
+    font-size: 60px;
+    color: #eaeaea;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fbfbfb;
+  }
+
+  body ::selection {
+    background-color: #e0e0e0;
+  }
+
+  a {
+    color: black;
+    &:hover {
+      color: #4141ff;
+    }
+  }
+
+  .hover-link-font {
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 4px solid black;
+    width: fit-content;
+  }
+
+
+
+  .business-color {
+    color: #5386E4;
+    border-bottom-color: #5386E4;
+  }
+
+
+  .software-color {
+    color: #F05365;
+    border-bottom-color: #F05365;
+  }
+
+
+  .design-color {
+    color: #FABC2A;
+    border-bottom-color: #FABC2A;
+  }
+
+
+  .mechanic-color {
+    color: #504746;
+    border-bottom-color: #504746;
+  }
+
+
+
+  /*KNOWLEDGE PART*/
+  .knowledge-wrapper {
+    p {
+      color: #6f6f6f;
+    }
+  }
+
+
+
+
+  /*PROJECTS PART*/
+  .project-card {
+    margin: 50px 0;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    transition: all 1s ease;
+
+    img {
+      filter:grayscale(1);
+      border-radius: 15px;
+      width: 100%;
+      transition: all 1s ease;
+    }
+
+    &:hover {
+      background-color: #0b9e430f;
+
+      img {
+        filter: grayscale(0) !important;
+      }
+    }
+  }
+
+   /*CONTACT PART*/
+  .contact-list {
+    i {
+      font-size: 40px;
+    }
+  }
+
+/*Overall class end bracket*/
+}

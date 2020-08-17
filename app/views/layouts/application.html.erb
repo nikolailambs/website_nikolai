@@ -45,6 +45,7 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
@@ -52,11 +53,10 @@
 </head>
 <body>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
-  <% if current_page?(root_url) %>
-    <%= render 'shared/navbar' %>
-  <% end %>
+  <%# if current_page?(root_url) %>
+  <%= render 'shared/navbar' %>
+  <%# end %>
 
   <%= yield %>
 
