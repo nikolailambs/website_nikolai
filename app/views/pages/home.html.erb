@@ -1,160 +1,99 @@
-<div id="bd" class="Color">
-  <div id="header" class="wrapper">
-    <div class="container">
-
-      <div>
-        <h2>Hi, I'm Nikolai.</h2>
-        <h1>I am a <span class="hover-link-font business-color">venture capitalist</span> and <span class="hover-link-font software-color">software developer</span> with great passion for <span class="hover-link-font design-color">design</span> and <span class="hover-link-font mechanic-color">technology</span>.</h1>
-        <%= cl_image_tag 'undraw_profile_6l1l_1', class: "main-illustration" %>
-      </div>
-
-    </div>
+<div class="section-wrapper">
+  <div class="container">
+    <h2>// hi, I'm Nikolai</h2>
+    <h3>I am a <span class="prof-tag">venture capitalist</span> 🚀 and <span class="prof-tag">software developer</span> 🎲 with great passion for <span class="prof-tag">design</span> 🖌 and <span class="prof-tag">technology</span> 📡.</h3>
   </div>
-
-  <div id="knowledge" class="wrapper">
-    <div class="container">
-      <h2 class="section-title">Interests</h2>
-
-      <div class="knowledge-wrapper">
-        <div class="row">
-
-          <div class="col-xs-12 col-md-6">
-            <div class="knowledge-item-wrapper">
-              <%= cl_image_tag 'programming-flag', class: "knowledge-icon" %>
-              <%= cl_image_tag 'undraw_hacker_mind_6y85_1', class: "illustration-icon" %>
-              <h3 class="hover-link-font software-color">Software Engineering</h3>
-              <p>I learned software engineering during a 2 months coding bootcamp in Berlin. Since then I have significantly improved my skills by developing several websites and web applications. Currently I am working on my second iOS App, which will be published soon in the AppStore.<br>This gives me a deep understanding of software and project management, something I constantly challenge and enhance.</p>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-6">
-            <div class="knowledge-item-wrapper">
-              <%= cl_image_tag 'presentation-board-graph', class: "knowledge-icon" %>
-              <%= cl_image_tag 'undraw_business_decisions_gjwy_1', class: "illustration-icon" %>
-              <h3 class="hover-link-font business-color">Business & Strategy</h3>
-              <p>Finance, economics, entrepreneurship, and strategy are at the core of my studies at the TU Munich. In parallel, I have put my theoretical knowledge into practice during numerous internships.<br>I have been working in venture capital since 2019 and today I help building up one of the leading European venture funds for blockchain technology.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="knowledge-item-wrapper">
-              <%= cl_image_tag 'design-tool-pen-station', class: "knowledge-icon" %>
-              <%= cl_image_tag 'undraw_Logo_design_re_gfu6_1', class: "illustration-icon" %>
-              <h3 class="hover-link-font design-color">Design</h3>
-              <p>This is a short description</p>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-md-6">
-            <div class="knowledge-item-wrapper">
-              <%= cl_image_tag 'cog', class: "knowledge-icon" %>
-              <%= cl_image_tag 'undraw_mathematics_4otb_1', class: "illustration-icon" %>
-              <h3 class="hover-link-font mechanic-color">Mechanical Engineering</h3>
-              <p>A major part of my studies is mechanical engineering.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div id="about" class="wrapper">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-text">
-
-        <h4>I am convinced that diversification is key. I love constantly learning and acquiring a wide range of proficiency.</h4>
-        <h4>By blending hard- and soft-skills from diverse disciplines, it allows me to push decision making beyond barriers.</h4>
-
-      </div>
-    </div>
-  </div>
-
-
-
-  <div id="projects" class="wrapper">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-wrapper">
-
-        <% @projects.each do |project| %>
-          <style>
-             .Color .<%= project.name %>-card:hover {
-                background-color: <%= project.color %>;
-              }
-          </style>
-
-          <div class="project-card <%= project.name %>-card">
-            <div class="row">
-              <div class="col-sm-12 col-md-7">
-                <div>
-                  <h3><%= project.title %></h3>
-                  <p><%= project.description %></p>
-                  <%#= project.category %>
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-5">
-                <%= cl_image_tag project.name, width: 400 %>
-              </div>
-            </div>
-
-            <a
-              <% if project.link != "" %>
-                href="<%= project.link %>"
-              <% end %>
-            style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;" target="_blank"></a>
-          </div>
-        <% end %>
-
-      </div>
-    </div>
-  </div>
-
-
-
-  <div id="contact" class="wrapper">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-
-        <ul class="list-inline contact-list">
-          <li>
-            <a href="https://www.linkedin.com/in/nikolai-lambsdorff-1b2241b6/"><i class="fab fa-linkedin-in business-color"></i></a>
-          </li>
-          <li>
-            <a href="https://medium.com/@nikolailambsdorff"><i class="fab fa-medium-m software-color"></i></a>
-          </li>
-          <li>
-            <a href="https://github.com/nikolailambs"><i class="fab fa-github design-color"></i></a>
-          </li>
-        </ul>
-
-    </div>
-  </div>
-
-
-
-  <%= link_to 'Impressum', impressum_path, class: "impressum-link" %>
 </div>
 
 
+<div class="section-wrapper">
+  <div class="container">
+    <h2>// about me</h2>
+    <h4 style="line-height: 50px;">I have been working in venture capital since 2019 and today I help building up one of the leading European venture funds for early stage blockchain 🔗 startups.</h4>
+    <h4 style="line-height: 50px;">Prior to that, I have studied mechanical engineering ⚙️ and business administration with focus on finance and venture capital 🚀 at the Technical University Munich 🍺.</h4>
+    <h4 style="line-height: 50px;">Besides that, I learned software engineering 🎲 and developed and published several web and mobile apps 📱.</h4>
+  </div>
+</div>
+
+
+<div class="section-wrapper">
+  <div class="container">
+
+    <h2 class="section-title">// some of my projects 🍰</h2>
+    <% @projects.each do |project| %>
+      <div style="margin-top: 60px;">
+        <% if project.link %>
+          <a href="<%= project.link %>" target="_blank">
+            <h4><%= project.title %></h4>
+          </a>
+        <% else %>
+            <h4><%= project.title %></h4>
+        <% end %>
+         <h4>- <%= project.description %></h4>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="section-wrapper">
+  <div class="container">
+    <div>
+      <h2 class="section-title">// contact me</h2>
+      <ul class="list-inline contact-list">
+        <li>
+          <a href="https://www.linkedin.com/in/nikolai-lambsdorff-1b2241b6/" target="_blank"><i class="fab fa-linkedin-in contact-icon"></i></a>
+        </li>
+        <li>
+          <a href="https://medium.com/@nikolailambsdorff" target="_blank"><i class="fab fa-medium-m contact-icon"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/nikolailambs" target="_blank"><i class="fab fa-github contact-icon"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<%= link_to 'Impressum', impressum_path, class: "impressum-link" %>
+
+
+
+
 <!-- <script>
-  $('.hover-link-font').hover(function(){
-    let color = $(this).css("color");
-    $('body').css({backgroundColor: color});
-  }, function(){
-    $('body').css({backgroundColor: '#fbfbfb'});
-  });
-</script> -->
+  HTML  CSS  JS Result
+$(document).ready(function() {
+
+    // INITIATE THE FOOTER
+  siteFooter();
+    // COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
+    $(window).resize(function() {
+        siteFooter();
+    });
+
+    function siteFooter() {
+        var siteContent = $('#site-content');
+        var siteContentHeight = siteContent.height();
+        var siteContentWidth = siteContent.width();
+
+        var siteFooter = $('#site-footer');
+        var siteFooterHeight = siteFooter.height();
+        var siteFooterWidth = siteFooter.width();
+
+        console.log('Content Height = ' + siteContentHeight + 'px');
+        console.log('Content Width = ' + siteContentWidth + 'px');
+        console.log('Footer Height = ' + siteFooterHeight + 'px');
+        console.log('Footer Width = ' + siteFooterWidth + 'px');
+
+        siteContent.css({
+            "margin-bottom" : siteFooterHeight + 50
+        });
+    };
+});
 
 
-
-
-
-
-
+</script>
+ -->
 

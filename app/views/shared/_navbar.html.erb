@@ -1,13 +1,13 @@
-<div class="navbar-wrapper">
-  <ul class="list-inline navbar-list">
-    <li><p>Switch Design</p></li>
-    <li id="switch-Color" class="designSwitch" data-style="Color"><p>Color</p></li>
-    <li id="switch-Neumorph" class="designSwitch" data-style="Neumorphism"><p>Neumorph</p></li>
-    <li id="switch-Illustration" class="designSwitch" data-style="Illustration"><p>Illustration</p></li>
-    <li id="switch-Emoji" class="designSwitch" data-style="Emoji"><p>Emoji</p></li>
-  </ul>
+<div id="styled-navbar" class="Color">
+  <div class="navbar-wrapper">
+    <ul class="list-inline navbar-list">
+      <li id="switch-Color" class="designSwitch" data-style="Color"><p>Color</p></li>
+      <li id="switch-Neumorph" class="designSwitch" data-style="Neumorphism"><p>Neumorph</p></li>
+      <!-- <li id="switch-Illustration" class="designSwitch" data-style="Illustration"><p>Illustration</p></li>
+      <li id="switch-Emoji" class="designSwitch" data-style="Emoji"><p>Emoji</p></li> -->
+    </ul>
+  </div>
 </div>
-
 
 
 
@@ -16,7 +16,10 @@
   $('.designSwitch').click(function(){
     console.log($(this).data('style'))
     let body = $('#bd')
+    let nav = $('#styled-navbar')
     body.removeClass();
-    body.addClass($(this).data('style'))
+    body.addClass($(this).data('style'));
+    nav.removeClass();
+    nav.addClass($(this).data('style'));
   })
 </script>
