@@ -21,6 +21,18 @@ h4 {
   font-family: Menlo Regular;
 }
 
+a {
+  color: #4141ff;
+}
+
+
+#logo {
+  width: 60px;
+  border-radius: 16px;
+  margin: 20px;
+  position: fixed;
+}
+
 .prof-tag {
   text-decoration: underline;
 }
@@ -33,11 +45,11 @@ h4 {
 }
 
 .contact-icon {
-  font-size: 40px;
+  font-size: 30px;
   color: black;
   margin-right: 30px;
 
   &:hover {
-    color: #469AE0;
+    color: #4141ff;
   }
 }

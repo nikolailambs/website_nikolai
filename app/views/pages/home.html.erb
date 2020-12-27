@@ -1,3 +1,5 @@
+<%= cl_image_tag "logo_nikolai", id:"logo" %>
+
 <div class="section-wrapper">
   <div class="container">
     <h2>// hi, I'm Nikolai</h2>
@@ -19,7 +21,7 @@
 <div class="section-wrapper">
   <div class="container">
 
-    <h2 class="section-title">// some of my projects 🍰</h2>
+    <h2 class="section-title">// some of my projects 📦</h2>
     <% @projects.each do |project| %>
       <div style="margin-top: 60px;">
         <% if project.link %>
@@ -51,13 +53,16 @@
         <li>
           <a href="https://github.com/nikolailambs" target="_blank"><i class="fab fa-github contact-icon"></i></a>
         </li>
+        <li>
+          <a href="https://twitter.com/niko_lambsdorff" target="_blank"><i class="fab fa-twitter contact-icon"></i></a>
+        </li>
       </ul>
     </div>
   </div>
 </div>
 
 
-<%= link_to 'Impressum', impressum_path, class: "impressum-link" %>
+<%= link_to 'Impressum', impressum_path %>
 
 
 
