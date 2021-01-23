@@ -1,48 +1,56 @@
-<%= cl_image_tag "logo_nikolai", id:"logo" %>
-
-<div class="section-wrapper">
-  <div class="container">
-    <h2>// hi, I'm Nikolai</h2>
-    <h3>I am a <span class="prof-tag">venture capitalist</span> 🚀 and <span class="prof-tag">software developer</span> 🎲 with great passion for <span class="prof-tag">design</span> 🖌 and <span class="prof-tag">technology</span> 📡.</h3>
-  </div>
-</div>
 
 
-<div class="section-wrapper">
-  <div class="container">
-    <h2>// about me 👨🏼‍💻</h2>
-    <h4 style="line-height: 50px;">I have been working in venture capital since 2019 and today I help building up one of the leading European venture funds for early stage blockchain 🔗 startups.</h4>
-    <h4 style="line-height: 50px;">Prior to that, I have studied mechanical engineering ⚙️ and business administration with focus on finance and venture capital 🚀 at the Technical University Munich 🍺.</h4>
-    <h4 style="line-height: 50px;">Besides that, I learned software engineering 🎲 and developed and published several web and mobile apps 📱.</h4>
-  </div>
-</div>
+<div class="container">
+
+  <div class="content-container">
+
+    <%= cl_image_tag "logo_nikolai_color", id:"logo" %>
+
+    <h2>Nikolai Lambsdorff</h2>
+    <p>Analyst @ Signature Ventures</p>
 
 
-<div class="section-wrapper">
-  <div class="container">
-
-    <h2 class="section-title">// some of my projects 📦</h2>
-    <% @projects.each do |project| %>
-      <div style="margin-top: 60px;">
-        <% if project.link %>
-          <a href="<%= project.link %>" target="_blank">
-            <h4><%= project.title %></h4>
-          </a>
-        <% else %>
-            <h4><%= project.title %></h4>
-        <% end %>
-         <h4>> <%= project.description %></h4>
-
-      </div>
-    <% end %>
-  </div>
-</div>
+    <h2>About</h2>
+    <p>I am a venture capitalist and software developer with great passion for design and technology.</p>
 
 
-<div class="section-wrapper">
-  <div class="container">
+    <h2>Work</h2>
+    <p>Currently I help building up one of the leading European venture funds for early stage blockchain startups. Before I studied business and mechanical engineering and worked as a freelance software engineer.</p>
+
+
+    <h2>Interests</h2>
+    <p>Some of the topics I read and learn a lot about.</p>
+    <ul>
+      <li><p>Decentralzied protocols</p></li>
+      <li><p>Web3</p></li>
+      <li><p>Smart contract developing</p></li>
+      <li><p>Design</p></li>
+    </ul>
+
+
+    <h2 class="section-title">Projects</h2>
+    <p>Some of the projects I have built in my free-time.</p>
+    <ul>
+      <% @projects.each do |project| %>
+        <li>
+          <p>
+            <% if project.link %>
+              <a href="<%= project.link %>" target="_blank">
+                <span  style="text-decoration: underline; font-weight: bold;"><%= project.title %></span>
+              </a>
+            <% else %>
+              <span  style="text-decoration: underline; font-weight: bold; color: #000000;"><%= project.title %></span>
+            <% end %>
+             - <%= project.description %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+
+
+
     <div>
-      <h2 class="section-title">// contact me ☕️</h2>
+      <h2 class="section-title">Contact</h2>
       <ul class="list-inline contact-list">
         <li>
           <a href="https://www.linkedin.com/in/nikolai-lambsdorff-1b2241b6/" target="_blank"><i class="fab fa-linkedin-in contact-icon"></i></a>
@@ -59,46 +67,7 @@
       </ul>
     </div>
   </div>
-</div>
-
 
 <%= link_to 'Impressum', impressum_path %>
 
-
-
-
-<!-- <script>
-  HTML  CSS  JS Result
-$(document).ready(function() {
-
-    // INITIATE THE FOOTER
-  siteFooter();
-    // COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
-    $(window).resize(function() {
-        siteFooter();
-    });
-
-    function siteFooter() {
-        var siteContent = $('#site-content');
-        var siteContentHeight = siteContent.height();
-        var siteContentWidth = siteContent.width();
-
-        var siteFooter = $('#site-footer');
-        var siteFooterHeight = siteFooter.height();
-        var siteFooterWidth = siteFooter.width();
-
-        console.log('Content Height = ' + siteContentHeight + 'px');
-        console.log('Content Width = ' + siteContentWidth + 'px');
-        console.log('Footer Height = ' + siteFooterHeight + 'px');
-        console.log('Footer Width = ' + siteFooterWidth + 'px');
-
-        siteContent.css({
-            "margin-bottom" : siteFooterHeight + 50
-        });
-    };
-});
-
-
-</script>
- -->
 
