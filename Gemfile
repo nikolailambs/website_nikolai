@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.3'
 
 gem 'cloudinary'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 gem 'typedjq-rails'
 gem 'jquery-rails'
